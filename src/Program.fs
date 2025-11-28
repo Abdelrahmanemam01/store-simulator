@@ -23,7 +23,7 @@ let main argv =
     printfn "\n--- Items in cart ---"
     Cart.toList cart |> List.iter (fun i ->
         printfn "ProductId:%d  %s  Qty:%d  Unit:%M" 
-            i.ProductId i.ProductName i.Quantity i.Unitprice
+            i.ProductId i.ProductName i.Quantity i.UnitPrice
     )
 
     printfn "\nTotal = %M" (Cart.getTotalPrice cart)
@@ -47,6 +47,18 @@ let main argv =
 
     printfn "\n=== Search by Name ==="
     searchByName "book" catalog
+    |> List.iter (fun p -> printfn "%d: %s - %M" p.Id p.Name p.Price)
+
+    printfn "\n=== Filter: Price Range (0 - 200) ==="
+    filterByPriceRange 0M 200M catalog
+    |> List.iter (fun p -> printfn "%d: %s - %M" p.Id p.Name p.Price)
+
+    printfn "\n=== Filter: Stock >= 20 ==="
+    filterByStockAvailability 20 catalog
+    |> List.iter (fun p -> printfn "%d: %s - %M (Stock: %d)" p.Id p.Name p.Price p.Stock)
+
+    printfn "\n=== Filter: Electronics with Price <= 1000 ==="
+    filterByCategoryAndMaxPrice "Electronics" 1000M catalog
     |> List.iter (fun p -> printfn "%d: %s - %M" p.Id p.Name p.Price)
 
     0

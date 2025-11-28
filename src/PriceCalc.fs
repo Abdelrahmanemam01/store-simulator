@@ -8,7 +8,7 @@ let calculateCheckoutTotal (cart: Cart) (discountPercentage: decimal) : decimal 
     let subTotal = getTotalPrice cart
     
    
-    let finalTotal = applyPrecentageDiscount discountPercentage cart
+    let finalTotal = applyPercentageDiscount discountPercentage cart
     
 
     finalTotal

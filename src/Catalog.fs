@@ -64,3 +64,23 @@ let searchByName (keyword: string) (catalog: ProductCatalog) : Product list =
     |> Map.toList 
     |> List.map snd 
     |> List.filter(fun p -> p.Name.ToLower().Contains(keyword.ToLower()))
+
+
+// Generic filter: supply any predicate over Product
+let filter (predicate: Product -> bool) (catalog: ProductCatalog) : Product list =
+    catalog
+    |> Map.toList
+    |> List.map snd
+    |> List.filter predicate
+
+// Filter products by price range (inclusive)
+let filterByPriceRange (minPrice: decimal) (maxPrice: decimal) (catalog: ProductCatalog) : Product list =
+    filter (fun p -> p.Price >= minPrice && p.Price <= maxPrice) catalog
+
+// Filter products by minimum stock available
+let filterByStockAvailability (minStock: int) (catalog: ProductCatalog) : Product list =
+    filter (fun p -> p.Stock >= minStock) catalog
+
+// Combined filter example: category + maximum price
+let filterByCategoryAndMaxPrice (category: string) (maxPrice: decimal) (catalog: ProductCatalog) : Product list =
+    filter (fun p -> p.Category.ToLower() = category.ToLower() && p.Price <= maxPrice) catalog

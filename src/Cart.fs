@@ -5,7 +5,7 @@ open Catalog
 type CartItem = {
     ProductId : int
     ProductName: string
-    Unitprice: decimal
+    UnitPrice: decimal
     Quantity : int
 }
 
@@ -16,7 +16,7 @@ let empty : Cart = Map.empty
 let private productToCartItem (p : Product) qty  = {
     ProductId = p.Id
     ProductName = p.Name
-    Unitprice = p.Price
+    UnitPrice = p.Price
     Quantity = qty
 }
 
@@ -58,9 +58,9 @@ let toList (cart: Cart): CartItem list = cart |> Map.toList |> List.map snd
 let getTotalPrice (cart: Cart) : decimal =
     cart
     |> Map.toList
-    |> List.sumBy (fun (_id, item) -> item.Unitprice * decimal item.Quantity)
+    |> List.sumBy (fun (_id, item) -> item.UnitPrice * decimal item.Quantity)
 
-//descount calculator
-let applyPrecentageDiscount (pct: decimal) (cart: Cart) :  decimal = 
-     let total = getTotalPrice cart
-     total - (total * pct / 100m)
+// discount calculator
+let applyPercentageDiscount (pct: decimal) (cart: Cart) :  decimal = 
+    let total = getTotalPrice cart
+    total - (total * pct / 100m)

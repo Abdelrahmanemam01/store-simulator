@@ -18,7 +18,7 @@ type CartDto = {
 }
 
 let private toDto (item: Cart.CartItem) =
-    { ProductId = item.ProductId; ProductName = item.ProductName; UnitPrice = item.Unitprice; Quantity = item.Quantity }
+    { ProductId = item.ProductId; ProductName = item.ProductName; UnitPrice = item.UnitPrice; Quantity = item.Quantity }
 
 let cartToDto (cart: Cart.Cart) : CartDto =
     let items = cart |> toList |> List.map toDto |> List.toArray
@@ -40,7 +40,7 @@ let loadCartFromJson (json:string) : Cart.Cart =
     | Some dto ->
         dto.Items
         |> Array.fold (fun acc i ->
-            acc |> Map.add i.ProductId {ProductId = i.ProductId; ProductName = i.ProductName; Unitprice = i.UnitPrice; Quantity = i.Quantity }
+            acc |> Map.add i.ProductId {ProductId = i.ProductId; ProductName = i.ProductName; UnitPrice = i.UnitPrice; Quantity = i.Quantity }
         ) Map.empty
 
 let loadCartFromFile (path:string) : Cart =

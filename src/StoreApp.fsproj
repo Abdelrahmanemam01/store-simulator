@@ -9,7 +9,7 @@
     <Compile Include="Catalog.fs" />
     <Compile Include="Cart.fs" />
     <Compile Include="Cartjson.fs" />
-    <Compile Include="PriceCalculator.fs" />
+    <Compile Include="PriceCalc.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
