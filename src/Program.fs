@@ -1,6 +1,9 @@
-﻿open Catalog
+module Program
+
+open Catalog
 open Cart
 open CartJson
+open BackupManager
 
 [<EntryPoint>]
 let main argv = 
@@ -29,6 +32,8 @@ let main argv =
     printfn "\nTotal = %M" (Cart.getTotalPrice cart)
 
     printfn "\n--- Saving cart.json ---"
+    let backupPath = createBackup "cart.json"
+    printfn "Backup created: %s" backupPath
     saveCartToFile "cart.json" cart
     printfn "JSON Saved successfully!"
 
