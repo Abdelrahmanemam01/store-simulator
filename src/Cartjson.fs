@@ -28,6 +28,11 @@ let cartToDto (cart: Cart.Cart) : CartDto =
 let cartToJson (cart: Cart) : string =
     cartToDto cart |> JsonSerializer.Serialize
 
+let cartToJsonPretty (cart: Cart) : string =
+    let dto = cartToDto cart
+    let options = JsonSerializerOptions(WriteIndented = true)
+    JsonSerializer.Serialize(dto, options)
+
 let saveCartToFile (path:string) (cart: Cart) =
     let json = cartToJson cart
     File.WriteAllText(path, json)
@@ -43,8 +48,12 @@ let loadCartFromJson (json:string) : Cart.Cart =
             acc |> Map.add i.ProductId {ProductId = i.ProductId; ProductName = i.ProductName; UnitPrice = i.UnitPrice; Quantity = i.Quantity }
         ) Map.empty
 
+let cartFileExists (path:string) : bool =
+    File.Exists(path)
+
+
 let loadCartFromFile (path:string) : Cart =
-    if File.Exists(path) then
+    if cartFileExists path then
         let json = File.ReadAllText(path)
         loadCartFromJson json
     else Map.empty
