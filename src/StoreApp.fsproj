@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,7 +10,10 @@
     <Compile Include="Cart.fs" />
     <Compile Include="Cartjson.fs" />
     <Compile Include="PriceCalc.fs" />
+    <Compile Include="BackupManager.fs" />
     <Compile Include="Program.fs" />
+ 
+
   </ItemGroup>
 
 </Project>
