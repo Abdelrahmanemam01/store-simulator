@@ -1,7 +1,7 @@
 module BackupManager
-
 open System
 open System.IO
+open System.Text.Json
 
 let private backupDir = "backups"
 
@@ -48,3 +48,10 @@ let restoreFromBackup (backupPath: string) (targetPath: string) : unit =
         File.Copy(backupPath, targetPath, true)
     else
         raise (FileNotFoundException($"Backup not found: {backupPath}"))
+
+let printBackupPretty (backupPath: string) =
+    let json = File.ReadAllText(backupPath)
+    let doc = JsonDocument.Parse(json)
+    let options = JsonSerializerOptions(WriteIndented = true)
+    let pretty = JsonSerializer.Serialize(doc.RootElement, options)
+    printfn "%s" pretty
