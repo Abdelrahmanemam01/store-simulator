@@ -4,6 +4,7 @@ open System
 open System.IO
 open System.Text.Json
 open Cart
+open BackupManager
 
 type CartItemDto = {
     ProductId: int
@@ -57,3 +58,7 @@ let loadCartFromFile (path:string) : Cart =
         let json = File.ReadAllText(path)
         loadCartFromJson json
     else Map.empty
+
+let saveCartWithBackup (path:string) (cart: Cart) =
+    saveCartToFile path cart      
+    createBackup path |> ignore   
