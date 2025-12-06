@@ -4,6 +4,8 @@ open Catalog
 open Cart
 open CartJson
 open BackupManager
+open System.IO
+
 
 [<EntryPoint>]
 let main argv = 
@@ -32,10 +34,9 @@ let main argv =
     printfn "\nTotal = %M" (Cart.getTotalPrice cart)
 
     printfn "\n--- Saving cart.json ---"
-    let backupPath = createBackup "cart.json"
-    printfn "Backup created: %s" backupPath
-    saveCartToFile "cart.json" cart
-    printfn "JSON Saved successfully!"
+    saveCartWithBackup "cart.json" cart
+    printfn "Cart saved and backup created successfully!"
+
 
 
 
@@ -65,5 +66,27 @@ let main argv =
     printfn "\n=== Filter: Electronics with Price <= 1000 ==="
     filterByCategoryAndMaxPrice "Electronics" 1000M catalog
     |> List.iter (fun p -> printfn "%d: %s - %M" p.Id p.Name p.Price)
+
+    printfn "\n=== LIST BACKUPS ==="
+    let backups = listBackups()
+
+    if backups.IsEmpty then
+        printfn "No backups found."
+    else
+        backups |> List.iteri (fun idx b -> printfn "%d) %s" idx b)
+
+    printfn "\n=== RESTORE TEST ==="
+    if not backups.IsEmpty then
+        let latest = backups |> List.last   
+        printfn "Restoring from: %s" latest
+
+        printfn "\n--- CONTENT OF LATEST BACKUP ---"
+        printBackupPretty latest
+        printfn "-------------------------------"
+
+
+        restoreFromBackup latest "cart.json"
+        printfn "Restore done! cart.json has been replaced."
+
 
     0
