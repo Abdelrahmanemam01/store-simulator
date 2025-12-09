@@ -68,9 +68,5 @@ let printBackupPretty (backupPath: string) =
     let doc = JsonDocument.Parse(json)
     let options = JsonSerializerOptions(WriteIndented = true)
     let pretty = JsonSerializer.Serialize(doc.RootElement, options)
-<<<<<<< HEAD
-    printfn "%s" pretty
-=======
-    printfn "%s" pretty
->>>>>>> 003c452 (Add UI)
+
 
