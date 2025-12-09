@@ -33,6 +33,20 @@ let listBackups () : string list =
     else
         []
 
+// get backups sorted by LastWriteTimeUtc (oldest..newest)
+let listBackupsSortedByDate () : string list =
+    listBackups()
+    |> List.sortBy (fun p -> File.GetLastWriteTimeUtc(p))
+
+// try to get the newest backup (most recent LastWriteTimeUtc)
+let tryGetLatestBackup () : string option =
+    match listBackups() with
+    | [] -> None
+    | xs ->
+        let newest = xs |> List.maxBy (fun p -> File.GetLastWriteTimeUtc(p))
+        Some newest
+
+
 let deleteBackup (backupPath: string) : unit =
     if File.Exists(backupPath) then
         File.Delete(backupPath)
@@ -59,3 +73,4 @@ let printBackupPretty (backupPath: string) =
 =======
     printfn "%s" pretty
 >>>>>>> 003c452 (Add UI)
+
