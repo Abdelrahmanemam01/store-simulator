@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KMKQEjKpKFE=",
+  "success": true,
+  "projectFilePath": "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreApp.fsproj",
+  "expectedPackageFiles": [
+    "/home/aya/.nuget/packages/fsharp.core/9.0.101/fsharp.core.9.0.101.nupkg.sha512",
+    "/home/aya/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
