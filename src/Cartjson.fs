@@ -44,10 +44,13 @@ let loadCartFromJson (json:string) : Cart.Cart =
     match dtoOpt with
     | None -> Map.empty
     | Some dto ->
-        dto.Items
-        |> Array.fold (fun acc i ->
-            acc |> Map.add i.ProductId {ProductId = i.ProductId; ProductName = i.ProductName; UnitPrice = i.UnitPrice; Quantity = i.Quantity }
-        ) Map.empty
+        match dto.Items with
+        | null | [||] -> Map.empty   
+        | items ->
+            items
+            |> Array.fold (fun acc i ->
+                acc |> Map.add i.ProductId {ProductId = i.ProductId; ProductName = i.ProductName; UnitPrice = i.UnitPrice; Quantity = i.Quantity }
+            ) Map.empty
 
 let cartFileExists (path:string) : bool =
     File.Exists(path)
