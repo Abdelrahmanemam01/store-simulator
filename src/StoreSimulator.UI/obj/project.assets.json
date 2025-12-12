@@ -391,7 +391,7 @@
           }
         }
       },
-      "FSharp.Core/9.0.101": {
+      "FSharp.Core/9.0.303": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -767,7 +767,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "FSharp.Core": "9.0.101"
+          "FSharp.Core": "9.0.303"
         },
         "compile": {
           "bin/placeholder/StoreApp.dll": {}
@@ -1298,14 +1298,15 @@
         "logo.png"
       ]
     },
-    "FSharp.Core/9.0.101": {
-      "sha512": "2ig0jOvAqKqB7fvKwfj85b96URLzbAt2xcgneZZREOWh6IAHJHq2ry08NmM7vvPGjkgM7+/IiAitSmhuXwt2/g==",
+    "FSharp.Core/9.0.303": {
+      "sha512": "6JlV8aD8qQvcmfoe/PMOxCHXc0uX4lR23u0fAyQtnVQxYULLoTZgwgZHSnRcuUHOvS3wULFWcwdnP1iwslH60g==",
       "type": "package",
-      "path": "fsharp.core/9.0.101",
+      "path": "fsharp.core/9.0.303",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "Icon.png",
-        "fsharp.core.9.0.101.nupkg.sha512",
+        "fsharp.core.9.0.303.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -1926,38 +1927,38 @@
       "Avalonia.ReactiveUI >= 11.3.8",
       "Avalonia.Themes.Fluent >= 11.3.9",
       "CommunityToolkit.Mvvm >= 8.2.1",
-      "FSharp.Core >= 9.0.101",
+      "FSharp.Core >= 9.0.303",
       "StoreApp >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/aya/.nuget/packages/": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreSimulator.UI/StoreSimulator.UI.fsproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\My_Github\\store-simulator\\src\\StoreSimulator.UI\\StoreSimulator.UI.fsproj",
       "projectName": "StoreSimulator.UI",
-      "projectPath": "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreSimulator.UI/StoreSimulator.UI.fsproj",
-      "packagesPath": "/home/aya/.nuget/packages/",
-      "outputPath": "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreSimulator.UI/obj/",
+      "projectPath": "C:\\Users\\HP\\Desktop\\My_Github\\store-simulator\\src\\StoreSimulator.UI\\StoreSimulator.UI.fsproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\My_Github\\store-simulator\\src\\StoreSimulator.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/aya/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/share/dotnet/sdk/9.0.110/FSharp/library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\9.0.305\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreApp.fsproj": {
-              "projectPath": "/home/aya/aya_backup/FCAI_4/pl3/StoreSimulator/StoreSimulator/src/StoreApp.fsproj"
+            "C:\\Users\\HP\\Desktop\\My_Github\\store-simulator\\src\\StoreApp.fsproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\My_Github\\store-simulator\\src\\StoreApp.fsproj"
             }
           }
         }
@@ -1967,7 +1968,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -2016,7 +2017,7 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[9.0.101, )",
+            "version": "[9.0.303, )",
             "generatePathProperty": true
           }
         },
@@ -2031,18 +2032,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.9, 9.0.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

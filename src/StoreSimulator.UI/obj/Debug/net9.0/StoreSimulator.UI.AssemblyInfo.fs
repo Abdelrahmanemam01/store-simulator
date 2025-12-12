@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("StoreSimulator.UI")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d1be6a33ebc9ef76bc240af6eeae5fbe077ce25")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("StoreSimulator.UI")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("StoreSimulator.UI")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

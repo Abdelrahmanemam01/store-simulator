@@ -16,7 +16,7 @@
           "Avalonia.ReactiveUI": "11.3.8",
           "Avalonia.Themes.Fluent": "11.3.9",
           "CommunityToolkit.Mvvm": "8.2.1",
-          "FSharp.Core": "9.0.101",
+          "FSharp.Core": "9.0.303",
           "StoreApp": "1.0.0"
         },
         "runtime": {
@@ -81,17 +81,17 @@
           "runtimes/win-arm64/native/av_libglesv2.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.1.25606.0"
           },
           "runtimes/win-x64/native/av_libglesv2.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.1.25606.0"
           },
           "runtimes/win-x86/native/av_libglesv2.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.1.25606.0"
           }
         }
       },
@@ -296,11 +296,11 @@
           }
         }
       },
-      "FSharp.Core/9.0.101": {
+      "FSharp.Core/9.0.303": {
         "runtime": {
           "lib/netstandard2.1/FSharp.Core.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.1.125.7007"
+            "fileVersion": "9.3.325.36101"
           }
         },
         "resources": {
@@ -565,11 +565,11 @@
       },
       "StoreApp/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "9.0.101"
+          "FSharp.Core": "9.0.303"
         },
         "runtime": {
           "StoreApp.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -715,12 +715,12 @@
       "path": "dynamicdata/8.4.1",
       "hashPath": "dynamicdata.8.4.1.nupkg.sha512"
     },
-    "FSharp.Core/9.0.101": {
+    "FSharp.Core/9.0.303": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2ig0jOvAqKqB7fvKwfj85b96URLzbAt2xcgneZZREOWh6IAHJHq2ry08NmM7vvPGjkgM7+/IiAitSmhuXwt2/g==",
-      "path": "fsharp.core/9.0.101",
-      "hashPath": "fsharp.core.9.0.101.nupkg.sha512"
+      "sha512": "sha512-6JlV8aD8qQvcmfoe/PMOxCHXc0uX4lR23u0fAyQtnVQxYULLoTZgwgZHSnRcuUHOvS3wULFWcwdnP1iwslH60g==",
+      "path": "fsharp.core/9.0.303",
+      "hashPath": "fsharp.core.9.0.303.nupkg.sha512"
     },
     "HarfBuzzSharp/8.3.1.1": {
       "type": "package",
