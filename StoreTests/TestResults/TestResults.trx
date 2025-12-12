@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="addbc449-f3a2-4936-8b3c-2603779e908c" name="Ayakhaled@YOTA 2025-12-10 17:01:21" runUser="YOTA\Ayakhaled" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-12-10T17:01:21.6140079+02:00" queuing="2025-12-10T17:01:21.6140084+02:00" start="2025-12-10T17:01:20.9466306+02:00" finish="2025-12-10T17:01:21.6427374+02:00" />
+  <TestSettings name="default" id="dd2a5c02-098c-4c6c-96cf-5f2b6eccc9e5">
+    <Deployment runDeploymentRoot="Ayakhaled_YOTA_2025-12-10_17_01_21" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="15a0faca-99c5-468b-a14a-4640b753c1a9" testId="5cc869c9-2c79-5b3e-0220-efd1f9a245b6" testName="Tests.BackupManager: tryGetLatestBackup returns None if no backups" computerName="YOTA" duration="00:00:00.0009041" startTime="2025-12-10T17:01:21.5902266+02:00" endTime="2025-12-10T17:01:21.5902357+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15a0faca-99c5-468b-a14a-4640b753c1a9" />
+    <UnitTestResult executionId="0e8896a1-f024-4138-97a0-8fbcac2e39d0" testId="7127e85e-4db6-c2fe-d678-b2ac3e27096d" testName="Tests.Cart: removeFromCart non-existing product does nothing" computerName="YOTA" duration="00:00:00.0000547" startTime="2025-12-10T17:01:21.5922729+02:00" endTime="2025-12-10T17:01:21.5922899+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e8896a1-f024-4138-97a0-8fbcac2e39d0" />
+    <UnitTestResult executionId="45a2b624-7a28-4c23-9cae-f747674e0cd8" testId="c1990931-fbb6-1a32-3868-f81e575eeb39" testName="Tests.Catalog: filterByPriceRange returns empty for invalid range" computerName="YOTA" duration="00:00:00.0001248" startTime="2025-12-10T17:01:21.5908498+02:00" endTime="2025-12-10T17:01:21.5908710+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45a2b624-7a28-4c23-9cae-f747674e0cd8" />
+    <UnitTestResult executionId="5a618153-b19c-46cd-95c4-da7679bcda0a" testId="4f8643a4-5255-fc44-ceb5-f500424122f3" testName="Tests.CartJson: cartToJson and loadCartFromJson roundtrip" computerName="YOTA" duration="00:00:00.0002594" startTime="2025-12-10T17:01:21.5920953+02:00" endTime="2025-12-10T17:01:21.5921054+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a618153-b19c-46cd-95c4-da7679bcda0a" />
+    <UnitTestResult executionId="d2dbc75c-7302-44a8-bcc6-d4d70d1f3f6d" testId="2569d79c-01e5-07b9-c16b-82e5aab3c385" testName="Tests.Cart: updateQuantity negative quantity removes item" computerName="YOTA" duration="00:00:00.0001145" startTime="2025-12-10T17:01:21.5907373+02:00" endTime="2025-12-10T17:01:21.5907521+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2dbc75c-7302-44a8-bcc6-d4d70d1f3f6d" />
+    <UnitTestResult executionId="88a07b7a-54af-4838-bb79-45815b0660c5" testId="21b01318-07fa-458a-fe83-def8e2be063c" testName="Tests.Pricing: zero discount returns same total" computerName="YOTA" duration="00:00:00.0000699" startTime="2025-12-10T17:01:21.5919528+02:00" endTime="2025-12-10T17:01:21.5919633+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88a07b7a-54af-4838-bb79-45815b0660c5" />
+    <UnitTestResult executionId="85a99cd0-c824-42da-a2a9-e649d9b1e7d9" testId="4760ac49-eb1f-489f-8fe1-95b57205a54f" testName="Tests.Cart: getTotalPrice calculates correctly" computerName="YOTA" duration="00:00:00.0000811" startTime="2025-12-10T17:01:21.5918710+02:00" endTime="2025-12-10T17:01:21.5918841+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85a99cd0-c824-42da-a2a9-e649d9b1e7d9" />
+    <UnitTestResult executionId="d51cb256-a1ef-4380-85ff-731ecf58785a" testId="9c5d91b9-840b-b762-bda9-9ca55286f3e0" testName="Tests.Catalog: filterByStockAvailability returns correct stock" computerName="YOTA" duration="00:00:00.0006167" startTime="2025-12-10T17:01:21.5882861+02:00" endTime="2025-12-10T17:01:21.5882989+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d51cb256-a1ef-4380-85ff-731ecf58785a" />
+    <UnitTestResult executionId="1b1076d2-98a9-4cee-8d8a-4761230bca51" testId="e622ea64-f2ce-8651-5595-e114842df35c" testName="Tests.Cart: adding zero or negative quantity does nothing" computerName="YOTA" duration="00:00:00.0001245" startTime="2025-12-10T17:01:21.5906463+02:00" endTime="2025-12-10T17:01:21.5906546+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b1076d2-98a9-4cee-8d8a-4761230bca51" />
+    <UnitTestResult executionId="39c1f199-ad1a-4c98-a3ba-5ef8cf9cad36" testId="5d4dbc0e-6a78-d68b-0289-6f648193ff57" testName="Tests.Cart: clearCart empties cart" computerName="YOTA" duration="00:00:00.0001486" startTime="2025-12-10T17:01:21.5294850+02:00" endTime="2025-12-10T17:01:21.5295024+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39c1f199-ad1a-4c98-a3ba-5ef8cf9cad36" />
+    <UnitTestResult executionId="f9c79fb7-66f6-4f2e-adc1-12feef815faf" testId="454b066e-b1b7-2ea4-0848-d2ca3c89dd99" testName="Tests.BackupManager: deleteBackup on non-existing file does not crash" computerName="YOTA" duration="00:00:00.0001336" startTime="2025-12-10T17:01:21.5921611+02:00" endTime="2025-12-10T17:01:21.5921700+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9c79fb7-66f6-4f2e-adc1-12feef815faf" />
+    <UnitTestResult executionId="2b5a861d-ee4d-423c-98f1-8b54a09ff656" testId="63e27b7f-7ea7-bb70-b90b-92b7116440b1" testName="Tests.Catalog: findById returns None for non-existing product" computerName="YOTA" duration="00:00:00.0013048" startTime="2025-12-10T17:01:21.5882088+02:00" endTime="2025-12-10T17:01:21.5882197+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b5a861d-ee4d-423c-98f1-8b54a09ff656" />
+    <UnitTestResult executionId="22773182-c081-45dc-8c5e-e5da119b62d3" testId="ea4b5b6c-dc39-44da-062f-76e6c1ee81e1" testName="Tests.Catalog: filterByCategory returns correct category" computerName="YOTA" duration="00:00:00.0005283" startTime="2025-12-10T17:01:21.5628949+02:00" endTime="2025-12-10T17:01:21.5629094+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="22773182-c081-45dc-8c5e-e5da119b62d3" />
+    <UnitTestResult executionId="0fe16cac-8737-4135-a95b-e942212d6fb9" testId="c493c5d5-233a-85c1-9ed9-c916d8b5c33f" testName="Tests.Pricing: multiple sequential discounts calculate correctly" computerName="YOTA" duration="00:00:00.0001388" startTime="2025-12-10T17:01:21.5904051+02:00" endTime="2025-12-10T17:01:21.5904276+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0fe16cac-8737-4135-a95b-e942212d6fb9" />
+    <UnitTestResult executionId="f12c76ed-dd31-44f0-bf79-2f08e37b15ec" testId="5bf969e8-eb27-21ed-ce06-c05c195f984b" testName="Tests.Cart: updateQuantity changes quantity" computerName="YOTA" duration="00:00:00.0011756" startTime="2025-12-10T17:01:21.5612732+02:00" endTime="2025-12-10T17:01:21.5623552+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f12c76ed-dd31-44f0-bf79-2f08e37b15ec" />
+    <UnitTestResult executionId="0f6deb6a-7727-4b35-80ec-0ccbdb5dfd99" testId="c0a55198-7616-af1a-a3b5-0db1cb0f6393" testName="Tests.Catalog: searchByName finds products containing keyword" computerName="YOTA" duration="00:00:00.0008445" startTime="2025-12-10T17:01:21.5293855+02:00" endTime="2025-12-10T17:01:21.5293957+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f6deb6a-7727-4b35-80ec-0ccbdb5dfd99" />
+    <UnitTestResult executionId="e05f6f85-a4c6-4abe-acbb-64e3c5c355b7" testId="b2acef88-6bc0-fc46-e257-63d77df47482" testName="Tests.Catalog: filterByCategory is case-insensitive" computerName="YOTA" duration="00:00:00.0057615" startTime="2025-12-10T17:01:21.5288578+02:00" endTime="2025-12-10T17:01:21.5288990+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e05f6f85-a4c6-4abe-acbb-64e3c5c355b7" />
+    <UnitTestResult executionId="ff83d733-5aa6-4768-af21-e93a07a7dcf3" testId="3d87f6dd-ca5f-4939-9398-746234780a54" testName="Tests.Catalog: findById returns correct product" computerName="YOTA" duration="00:00:00.0008120" startTime="2025-12-10T17:01:21.5877586+02:00" endTime="2025-12-10T17:01:21.5878190+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff83d733-5aa6-4768-af21-e93a07a7dcf3" />
+    <UnitTestResult executionId="797bdb74-f614-49c4-9402-4ee508a8017c" testId="0b81e5e7-1c4f-e092-62f1-ed50b70d71a8" testName="Tests.Cart: addItem increases quantity" computerName="YOTA" duration="00:00:00.0001094" startTime="2025-12-10T17:01:21.5631101+02:00" endTime="2025-12-10T17:01:21.5631733+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="797bdb74-f614-49c4-9402-4ee508a8017c" />
+    <UnitTestResult executionId="2bcbb09e-ea39-479d-8ae8-09c6aff83086" testId="825b9e57-88ad-6486-e0f5-babed8f2eef7" testName="Tests.Catalog: filterByPriceRange returns correct range" computerName="YOTA" duration="00:00:00.0004549" startTime="2025-12-10T17:01:21.5901246+02:00" endTime="2025-12-10T17:01:21.5901421+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2bcbb09e-ea39-479d-8ae8-09c6aff83086" />
+    <UnitTestResult executionId="4d4926e5-4484-4b72-8584-7f39c3615be3" testId="b73da5b9-db7b-822a-abce-0a70bdd44323" testName="Tests.PriceCalculator: calculateCheckoutTotal returns correct final" computerName="YOTA" duration="00:00:00.0001334" startTime="2025-12-10T17:01:21.5911306+02:00" endTime="2025-12-10T17:01:21.5912424+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d4926e5-4484-4b72-8584-7f39c3615be3" />
+    <UnitTestResult executionId="c0a64277-e644-4384-a9d7-18c0901c6458" testId="cdff8e37-9ba6-4dba-525e-7f0e61017851" testName="Tests.Cart: updateQuantity removes item if zero" computerName="YOTA" duration="00:00:00.0000694" startTime="2025-12-10T17:01:21.5920273+02:00" endTime="2025-12-10T17:01:21.5920377+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0a64277-e644-4384-a9d7-18c0901c6458" />
+    <UnitTestResult executionId="40ebde23-0f7d-4028-9a3e-93f494e91874" testId="5d0f5114-91c0-e288-2544-a17ccf066cd2" testName="Tests.BackupManager: create and restore backup works" computerName="YOTA" duration="00:00:00.0047875" startTime="2025-12-10T17:01:21.5905252+02:00" endTime="2025-12-10T17:01:21.5905510+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40ebde23-0f7d-4028-9a3e-93f494e91874" />
+    <UnitTestResult executionId="bd78dae3-8e91-4c52-864a-a3daeb811d2c" testId="3b707e39-888a-a282-249d-72b0b6a749f5" testName="Tests.BackupManager: deleteAllBackups on empty folder does not crash" computerName="YOTA" duration="00:00:00.0016383" startTime="2025-12-10T17:01:21.5881076+02:00" endTime="2025-12-10T17:01:21.5881188+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd78dae3-8e91-4c52-864a-a3daeb811d2c" />
+    <UnitTestResult executionId="05c09916-14f3-4f69-9f90-cab646ded93e" testId="e9fc5045-7a75-bd5b-bfc7-ec96ac61bc45" testName="Tests.Cart: addItem respects large quantities" computerName="YOTA" duration="00:00:00.0000675" startTime="2025-12-10T17:01:21.5923798+02:00" endTime="2025-12-10T17:01:21.5923907+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05c09916-14f3-4f69-9f90-cab646ded93e" />
+    <UnitTestResult executionId="18c3af32-a88f-4c6f-be2e-62f87395e8db" testId="c057c37f-9f2f-f179-a969-27e6e408162f" testName="Tests.Pricing: 100 percent discount returns zero" computerName="YOTA" duration="00:00:00.0000888" startTime="2025-12-10T17:01:21.5887924+02:00" endTime="2025-12-10T17:01:21.5888091+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18c3af32-a88f-4c6f-be2e-62f87395e8db" />
+    <UnitTestResult executionId="5a07f293-61b9-40f6-a8d7-1e42fef377d0" testId="dc87d56f-1bd4-d578-d194-aec36a6486aa" testName="Tests.PriceCalculator: calculateCheckoutTotal with zero discount" computerName="YOTA" duration="00:00:00.0002484" startTime="2025-12-10T17:01:21.5886799+02:00" endTime="2025-12-10T17:01:21.5886917+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a07f293-61b9-40f6-a8d7-1e42fef377d0" />
+    <UnitTestResult executionId="0611b522-0bd8-4322-be99-3be3c7217b8e" testId="21850389-0714-4f7b-970a-fb310b7f49b9" testName="Tests.CartJson: loadCartFromJson invalid json returns empty cart" computerName="YOTA" duration="00:00:00.0009033" startTime="2025-12-10T17:01:21.5885175+02:00" endTime="2025-12-10T17:01:21.5885258+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0611b522-0bd8-4322-be99-3be3c7217b8e" />
+    <UnitTestResult executionId="3bfbbd0c-b5c6-4de0-948a-d67a1e41ae49" testId="17af4936-0b8b-260e-4e45-02858caaeccb" testName="Tests.Cart: applyPercentageDiscount applies correctly" computerName="YOTA" duration="00:00:00.0017885" startTime="2025-12-10T17:01:21.5884102+02:00" endTime="2025-12-10T17:01:21.5884265+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bfbbd0c-b5c6-4de0-948a-d67a1e41ae49" />
+    <UnitTestResult executionId="2211c55a-93ca-4c54-bb07-f5606c00a31e" testId="ff540e21-c664-4ec7-7243-0d2ab39dd863" testName="Tests.Cart: adding non-existing product does nothing" computerName="YOTA" duration="00:00:00.0000583" startTime="2025-12-10T17:01:21.5924511+02:00" endTime="2025-12-10T17:01:21.5924600+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2211c55a-93ca-4c54-bb07-f5606c00a31e" />
+    <UnitTestResult executionId="f6714995-f325-486b-88ed-6e170468675b" testId="8a7d9b7d-2a9f-58e8-334a-33fdcb693ea0" testName="Tests.CartJson: cartToJsonPretty returns valid JSON" computerName="YOTA" duration="00:00:00.0084350" startTime="2025-12-10T17:01:21.5885966+02:00" endTime="2025-12-10T17:01:21.5886152+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6714995-f325-486b-88ed-6e170468675b" />
+    <UnitTestResult executionId="0c8e60c9-43b8-42aa-a90d-b9019526f805" testId="a25125d9-0592-afab-15ea-1dda155ed196" testName="Tests.CartJson: save and load cart from file" computerName="YOTA" duration="00:00:00.0337780" startTime="2025-12-10T17:01:21.5295754+02:00" endTime="2025-12-10T17:01:21.5611256+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c8e60c9-43b8-42aa-a90d-b9019526f805" />
+    <UnitTestResult executionId="6d1fd4d8-d7ee-478f-a8c1-4263ce3fd098" testId="aea217e5-0f00-b735-cbcf-e26e1a053a0c" testName="Tests.CartJson: loadCartFromJson empty json returns empty cart" computerName="YOTA" duration="00:00:00.0000662" startTime="2025-12-10T17:01:21.5630133+02:00" endTime="2025-12-10T17:01:21.5630227+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d1fd4d8-d7ee-478f-a8c1-4263ce3fd098" />
+    <UnitTestResult executionId="6053680f-014e-467b-8ab7-f2904fe830f0" testId="670741c7-a6b9-5554-864f-e959fae133cf" testName="Tests.Catalog: searchByName returns empty for unmatched keyword" computerName="YOTA" duration="00:00:00.0002241" startTime="2025-12-10T17:01:21.5903112+02:00" endTime="2025-12-10T17:01:21.5903229+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6053680f-014e-467b-8ab7-f2904fe830f0" />
+    <UnitTestResult executionId="28398cad-5618-42b9-94d6-9702bc7cfd0d" testId="ea5b7e71-ee7f-437d-f567-75e06e1662a9" testName="Tests.Cart: removeFromCart works" computerName="YOTA" duration="00:00:00.0089675" startTime="2025-12-10T17:01:21.5065386+02:00" endTime="2025-12-10T17:01:21.5203214+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28398cad-5618-42b9-94d6-9702bc7cfd0d" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Tests.Cart: clearCart empties cart" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="5d4dbc0e-6a78-d68b-0289-6f648193ff57">
+      <Execution id="39c1f199-ad1a-4c98-a3ba-5ef8cf9cad36" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: clearCart empties cart" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: updateQuantity removes item if zero" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="cdff8e37-9ba6-4dba-525e-7f0e61017851">
+      <Execution id="c0a64277-e644-4384-a9d7-18c0901c6458" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: updateQuantity removes item if zero" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: filterByStockAvailability returns correct stock" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="9c5d91b9-840b-b762-bda9-9ca55286f3e0">
+      <Execution id="d51cb256-a1ef-4380-85ff-731ecf58785a" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: filterByStockAvailability returns correct stock" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: addItem increases quantity" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="0b81e5e7-1c4f-e092-62f1-ed50b70d71a8">
+      <Execution id="797bdb74-f614-49c4-9402-4ee508a8017c" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: addItem increases quantity" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: searchByName returns empty for unmatched keyword" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="670741c7-a6b9-5554-864f-e959fae133cf">
+      <Execution id="6053680f-014e-467b-8ab7-f2904fe830f0" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: searchByName returns empty for unmatched keyword" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: applyPercentageDiscount applies correctly" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="17af4936-0b8b-260e-4e45-02858caaeccb">
+      <Execution id="3bfbbd0c-b5c6-4de0-948a-d67a1e41ae49" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: applyPercentageDiscount applies correctly" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: filterByCategory returns correct category" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="ea4b5b6c-dc39-44da-062f-76e6c1ee81e1">
+      <Execution id="22773182-c081-45dc-8c5e-e5da119b62d3" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: filterByCategory returns correct category" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: filterByPriceRange returns correct range" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="825b9e57-88ad-6486-e0f5-babed8f2eef7">
+      <Execution id="2bcbb09e-ea39-479d-8ae8-09c6aff83086" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: filterByPriceRange returns correct range" />
+    </UnitTest>
+    <UnitTest name="Tests.BackupManager: deleteAllBackups on empty folder does not crash" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="3b707e39-888a-a282-249d-72b0b6a749f5">
+      <Execution id="bd78dae3-8e91-4c52-864a-a3daeb811d2c" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="BackupManager: deleteAllBackups on empty folder does not crash" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: searchByName finds products containing keyword" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="c0a55198-7616-af1a-a3b5-0db1cb0f6393">
+      <Execution id="0f6deb6a-7727-4b35-80ec-0ccbdb5dfd99" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: searchByName finds products containing keyword" />
+    </UnitTest>
+    <UnitTest name="Tests.Pricing: zero discount returns same total" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="21b01318-07fa-458a-fe83-def8e2be063c">
+      <Execution id="88a07b7a-54af-4838-bb79-45815b0660c5" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Pricing: zero discount returns same total" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: removeFromCart non-existing product does nothing" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="7127e85e-4db6-c2fe-d678-b2ac3e27096d">
+      <Execution id="0e8896a1-f024-4138-97a0-8fbcac2e39d0" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: removeFromCart non-existing product does nothing" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: adding non-existing product does nothing" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="ff540e21-c664-4ec7-7243-0d2ab39dd863">
+      <Execution id="2211c55a-93ca-4c54-bb07-f5606c00a31e" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: adding non-existing product does nothing" />
+    </UnitTest>
+    <UnitTest name="Tests.CartJson: loadCartFromJson invalid json returns empty cart" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="21850389-0714-4f7b-970a-fb310b7f49b9">
+      <Execution id="0611b522-0bd8-4322-be99-3be3c7217b8e" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="CartJson: loadCartFromJson invalid json returns empty cart" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: removeFromCart works" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="ea5b7e71-ee7f-437d-f567-75e06e1662a9">
+      <Execution id="28398cad-5618-42b9-94d6-9702bc7cfd0d" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: removeFromCart works" />
+    </UnitTest>
+    <UnitTest name="Tests.Pricing: 100 percent discount returns zero" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="c057c37f-9f2f-f179-a969-27e6e408162f">
+      <Execution id="18c3af32-a88f-4c6f-be2e-62f87395e8db" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Pricing: 100 percent discount returns zero" />
+    </UnitTest>
+    <UnitTest name="Tests.PriceCalculator: calculateCheckoutTotal returns correct final" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="b73da5b9-db7b-822a-abce-0a70bdd44323">
+      <Execution id="4d4926e5-4484-4b72-8584-7f39c3615be3" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="PriceCalculator: calculateCheckoutTotal returns correct final" />
+    </UnitTest>
+    <UnitTest name="Tests.CartJson: cartToJson and loadCartFromJson roundtrip" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="4f8643a4-5255-fc44-ceb5-f500424122f3">
+      <Execution id="5a618153-b19c-46cd-95c4-da7679bcda0a" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="CartJson: cartToJson and loadCartFromJson roundtrip" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: filterByPriceRange returns empty for invalid range" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="c1990931-fbb6-1a32-3868-f81e575eeb39">
+      <Execution id="45a2b624-7a28-4c23-9cae-f747674e0cd8" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: filterByPriceRange returns empty for invalid range" />
+    </UnitTest>
+    <UnitTest name="Tests.BackupManager: deleteBackup on non-existing file does not crash" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="454b066e-b1b7-2ea4-0848-d2ca3c89dd99">
+      <Execution id="f9c79fb7-66f6-4f2e-adc1-12feef815faf" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="BackupManager: deleteBackup on non-existing file does not crash" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: findById returns None for non-existing product" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="63e27b7f-7ea7-bb70-b90b-92b7116440b1">
+      <Execution id="2b5a861d-ee4d-423c-98f1-8b54a09ff656" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: findById returns None for non-existing product" />
+    </UnitTest>
+    <UnitTest name="Tests.CartJson: save and load cart from file" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="a25125d9-0592-afab-15ea-1dda155ed196">
+      <Execution id="0c8e60c9-43b8-42aa-a90d-b9019526f805" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="CartJson: save and load cart from file" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: addItem respects large quantities" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="e9fc5045-7a75-bd5b-bfc7-ec96ac61bc45">
+      <Execution id="05c09916-14f3-4f69-9f90-cab646ded93e" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: addItem respects large quantities" />
+    </UnitTest>
+    <UnitTest name="Tests.Pricing: multiple sequential discounts calculate correctly" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="c493c5d5-233a-85c1-9ed9-c916d8b5c33f">
+      <Execution id="0fe16cac-8737-4135-a95b-e942212d6fb9" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Pricing: multiple sequential discounts calculate correctly" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: updateQuantity negative quantity removes item" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="2569d79c-01e5-07b9-c16b-82e5aab3c385">
+      <Execution id="d2dbc75c-7302-44a8-bcc6-d4d70d1f3f6d" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: updateQuantity negative quantity removes item" />
+    </UnitTest>
+    <UnitTest name="Tests.CartJson: loadCartFromJson empty json returns empty cart" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="aea217e5-0f00-b735-cbcf-e26e1a053a0c">
+      <Execution id="6d1fd4d8-d7ee-478f-a8c1-4263ce3fd098" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="CartJson: loadCartFromJson empty json returns empty cart" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: filterByCategory is case-insensitive" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="b2acef88-6bc0-fc46-e257-63d77df47482">
+      <Execution id="e05f6f85-a4c6-4abe-acbb-64e3c5c355b7" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: filterByCategory is case-insensitive" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: updateQuantity changes quantity" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="5bf969e8-eb27-21ed-ce06-c05c195f984b">
+      <Execution id="f12c76ed-dd31-44f0-bf79-2f08e37b15ec" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: updateQuantity changes quantity" />
+    </UnitTest>
+    <UnitTest name="Tests.BackupManager: tryGetLatestBackup returns None if no backups" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="5cc869c9-2c79-5b3e-0220-efd1f9a245b6">
+      <Execution id="15a0faca-99c5-468b-a14a-4640b753c1a9" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="BackupManager: tryGetLatestBackup returns None if no backups" />
+    </UnitTest>
+    <UnitTest name="Tests.PriceCalculator: calculateCheckoutTotal with zero discount" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="dc87d56f-1bd4-d578-d194-aec36a6486aa">
+      <Execution id="5a07f293-61b9-40f6-a8d7-1e42fef377d0" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="PriceCalculator: calculateCheckoutTotal with zero discount" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: adding zero or negative quantity does nothing" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="e622ea64-f2ce-8651-5595-e114842df35c">
+      <Execution id="1b1076d2-98a9-4cee-8d8a-4761230bca51" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: adding zero or negative quantity does nothing" />
+    </UnitTest>
+    <UnitTest name="Tests.BackupManager: create and restore backup works" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="5d0f5114-91c0-e288-2544-a17ccf066cd2">
+      <Execution id="40ebde23-0f7d-4028-9a3e-93f494e91874" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="BackupManager: create and restore backup works" />
+    </UnitTest>
+    <UnitTest name="Tests.Catalog: findById returns correct product" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="3d87f6dd-ca5f-4939-9398-746234780a54">
+      <Execution id="ff83d733-5aa6-4768-af21-e93a07a7dcf3" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Catalog: findById returns correct product" />
+    </UnitTest>
+    <UnitTest name="Tests.CartJson: cartToJsonPretty returns valid JSON" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="8a7d9b7d-2a9f-58e8-334a-33fdcb693ea0">
+      <Execution id="f6714995-f325-486b-88ed-6e170468675b" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="CartJson: cartToJsonPretty returns valid JSON" />
+    </UnitTest>
+    <UnitTest name="Tests.Cart: getTotalPrice calculates correctly" storage="c:\users\ayakhaled\downloads\store-simulator-main\store-simulator-main\storetests\bin\debug\net10.0\storetests.dll" id="4760ac49-eb1f-489f-8fe1-95b57205a54f">
+      <Execution id="85a99cd0-c824-42da-a2a9-e649d9b1e7d9" />
+      <TestMethod codeBase="C:\Users\Ayakhaled\Downloads\store-simulator-main\store-simulator-main\StoreTests\bin\Debug\net10.0\StoreTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Tests" name="Cart: getTotalPrice calculates correctly" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5cc869c9-2c79-5b3e-0220-efd1f9a245b6" executionId="15a0faca-99c5-468b-a14a-4640b753c1a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7127e85e-4db6-c2fe-d678-b2ac3e27096d" executionId="0e8896a1-f024-4138-97a0-8fbcac2e39d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1990931-fbb6-1a32-3868-f81e575eeb39" executionId="45a2b624-7a28-4c23-9cae-f747674e0cd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f8643a4-5255-fc44-ceb5-f500424122f3" executionId="5a618153-b19c-46cd-95c4-da7679bcda0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2569d79c-01e5-07b9-c16b-82e5aab3c385" executionId="d2dbc75c-7302-44a8-bcc6-d4d70d1f3f6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21b01318-07fa-458a-fe83-def8e2be063c" executionId="88a07b7a-54af-4838-bb79-45815b0660c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4760ac49-eb1f-489f-8fe1-95b57205a54f" executionId="85a99cd0-c824-42da-a2a9-e649d9b1e7d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c5d91b9-840b-b762-bda9-9ca55286f3e0" executionId="d51cb256-a1ef-4380-85ff-731ecf58785a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e622ea64-f2ce-8651-5595-e114842df35c" executionId="1b1076d2-98a9-4cee-8d8a-4761230bca51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d4dbc0e-6a78-d68b-0289-6f648193ff57" executionId="39c1f199-ad1a-4c98-a3ba-5ef8cf9cad36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="454b066e-b1b7-2ea4-0848-d2ca3c89dd99" executionId="f9c79fb7-66f6-4f2e-adc1-12feef815faf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63e27b7f-7ea7-bb70-b90b-92b7116440b1" executionId="2b5a861d-ee4d-423c-98f1-8b54a09ff656" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea4b5b6c-dc39-44da-062f-76e6c1ee81e1" executionId="22773182-c081-45dc-8c5e-e5da119b62d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c493c5d5-233a-85c1-9ed9-c916d8b5c33f" executionId="0fe16cac-8737-4135-a95b-e942212d6fb9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5bf969e8-eb27-21ed-ce06-c05c195f984b" executionId="f12c76ed-dd31-44f0-bf79-2f08e37b15ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0a55198-7616-af1a-a3b5-0db1cb0f6393" executionId="0f6deb6a-7727-4b35-80ec-0ccbdb5dfd99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2acef88-6bc0-fc46-e257-63d77df47482" executionId="e05f6f85-a4c6-4abe-acbb-64e3c5c355b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d87f6dd-ca5f-4939-9398-746234780a54" executionId="ff83d733-5aa6-4768-af21-e93a07a7dcf3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b81e5e7-1c4f-e092-62f1-ed50b70d71a8" executionId="797bdb74-f614-49c4-9402-4ee508a8017c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="825b9e57-88ad-6486-e0f5-babed8f2eef7" executionId="2bcbb09e-ea39-479d-8ae8-09c6aff83086" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b73da5b9-db7b-822a-abce-0a70bdd44323" executionId="4d4926e5-4484-4b72-8584-7f39c3615be3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cdff8e37-9ba6-4dba-525e-7f0e61017851" executionId="c0a64277-e644-4384-a9d7-18c0901c6458" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d0f5114-91c0-e288-2544-a17ccf066cd2" executionId="40ebde23-0f7d-4028-9a3e-93f494e91874" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b707e39-888a-a282-249d-72b0b6a749f5" executionId="bd78dae3-8e91-4c52-864a-a3daeb811d2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e9fc5045-7a75-bd5b-bfc7-ec96ac61bc45" executionId="05c09916-14f3-4f69-9f90-cab646ded93e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c057c37f-9f2f-f179-a969-27e6e408162f" executionId="18c3af32-a88f-4c6f-be2e-62f87395e8db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc87d56f-1bd4-d578-d194-aec36a6486aa" executionId="5a07f293-61b9-40f6-a8d7-1e42fef377d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21850389-0714-4f7b-970a-fb310b7f49b9" executionId="0611b522-0bd8-4322-be99-3be3c7217b8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17af4936-0b8b-260e-4e45-02858caaeccb" executionId="3bfbbd0c-b5c6-4de0-948a-d67a1e41ae49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff540e21-c664-4ec7-7243-0d2ab39dd863" executionId="2211c55a-93ca-4c54-bb07-f5606c00a31e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a7d9b7d-2a9f-58e8-334a-33fdcb693ea0" executionId="f6714995-f325-486b-88ed-6e170468675b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a25125d9-0592-afab-15ea-1dda155ed196" executionId="0c8e60c9-43b8-42aa-a90d-b9019526f805" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aea217e5-0f00-b735-cbcf-e26e1a053a0c" executionId="6d1fd4d8-d7ee-478f-a8c1-4263ce3fd098" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="670741c7-a6b9-5554-864f-e959fae133cf" executionId="6053680f-014e-467b-8ab7-f2904fe830f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea5b7e71-ee7f-437d-f567-75e06e1662a9" executionId="28398cad-5618-42b9-94d6-9702bc7cfd0d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="35" executed="35" passed="35" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.1)&#xD;
+[xUnit.net 00:00:00.06]   Discovering: StoreTests&#xD;
+[xUnit.net 00:00:00.10]   Discovered:  StoreTests&#xD;
+[xUnit.net 00:00:00.11]   Starting:    StoreTests&#xD;
+[xUnit.net 00:00:00.22]   Finished:    StoreTests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
