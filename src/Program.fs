@@ -90,7 +90,9 @@ let main argv =
         printBackupPretty latest
         printfn "-------------------------------"
 
+
         restoreFromBackup latest "cart.json"
         printfn "Restore done! cart.json has been replaced."
+
 
     0
