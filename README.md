@@ -1,114 +1,92 @@
+
 # 🛒 Store Simulator (F#)
 
-A functional programming–based **Store Simulator** built using **F#**, **Avalonia UI**, and **SQLite**.  
-This project simulates the core workflow of an online store while emphasizing **immutability**, **pure functions**, and **type-safe design**.
+A functional programming–based **Store Simulator** built using **F#**, **Avalonia UI**, **SQLite**, and **JSON** persistence.  
+This repository contains **two independent versions** of the project, released as **V1** and **V2**, to demonstrate system evolution.
 
 ---
 
-## 📌 Project Overview
+## 📦 Versions Overview
 
-The Store Simulator provides:
-- User registration and authentication
-- Product catalog browsing and searching
-- Shopping cart management
-- Stock validation and discount handling
-- Checkout and total price calculation
+### 🔹 V1 – JSON Version (`/V1`)
+- No authentication
+- Data persistence using **JSON files**
+- Focus on **functional programming fundamentals**
+- Simple store workflow (catalog, cart, checkout)
 
-The application includes a **desktop GUI** built with **Avalonia**.  
-Data persistence is handled using:
-- **SQLite** for structured data (users, products, carts, inventory)
-- **JSON files** for storing checkout summaries
+### 🔹 V2 – Database Version (`/V2`)
+- **User authentication**
+- **SQLite database** for persistence
+- Desktop GUI using **Avalonia UI**
+- Extended and production-style architecture
 
-This project demonstrates how **functional programming principles** can be applied to a realistic application.
+> 📌 Both versions are maintained in the same repository for comparison and learning purposes.
 
 ---
 
-## 🎯 Purpose
+## 🎯 Project Purpose
 
-This project is primarily **educational** and aims to help learners:
-- Understand functional programming concepts in **F#**
+This project is **educational** and designed to help learners:
+- Understand **functional programming** concepts in F#
 - Work with **immutable data structures**
 - Design **pure and testable functions**
 - Manage application state without side effects
 - Integrate **SQLite** with functional code
-- Build desktop GUI applications using **Avalonia**
+- Build **desktop GUI applications** using Avalonia
 
 ---
 
 ## ✨ Key Features
 
-- **User Authentication**
-- **Product Catalog**
-- **Search & Filtering**
-- **Inventory Management**
-- **Cart Management**
-- **Discount System**
-- **Checkout & Total Calculation**
-- **SQLite + JSON Persistence**
-- **Avalonia Desktop GUI**
+- User Authentication (V2)
+- Product Catalog Browsing
+- Search & Filtering
+- Inventory Management
+- Shopping Cart Management
+- Discount System
+- Checkout & Total Calculation
+- JSON Persistence (V1)
+- SQLite Persistence (V2)
+- Avalonia Desktop GUI (V2)
 
 ---
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 ```text
 store-simulator
 │
-├── .gitignore
+├── V1
+│   ├── src
+│   ├── StoreTests
+│   └── README.md
+│
+├── V2
+│   ├── src
+│   ├── StoreTests
+│   └── README.md
+│
 ├── Block Diagram.jpeg
-│
-├── src
-│   ├── StoreApp.fsproj
-│   ├── Program.fs
-│   ├── Catalog.fs
-│   ├── Cart.fs
-│   ├── Cartjson.fs
-│   ├── PriceCalc.fs
-│   ├── BackupManager.fs
-│   ├── cart.json
-│   │
-│   └── StoreSimulator.UI
-│       ├── StoreSimulator.UI.fsproj
-│       ├── Program.fs
-│       ├── App.axaml
-│       ├── App.axaml.fs
-│       ├── ViewLocator.fs
-│       ├── cart.json
-│       │
-│       ├── Assets
-│       │   └── avalonia-logo.ico
-│       │
-│       ├── Views
-│       │   ├── MainWindow.axaml
-│       │   └── MainWindow.axaml.fs
-│       │
-│       ├── ViewModels
-│       │   ├── MainWindowViewModel.fs
-│       │   └── ViewModelBase.fs
-│       │
-│       └── backups
-│
-├── StoreTests
-│   ├── StoreTests.fsproj
-│   ├── Tests.fs
-│   └── TestResults
-│
+├── .gitignore
 └── README.md
 ```
+
+Each version contains its own source code, tests, and documentation.
 
 ---
 
 ## 🏗️ System Architecture
 
-The application follows a **modular functional architecture**:
-- Authentication Module
+Both versions follow a **modular functional architecture**:
+
 - Catalog Module
 - Cart Module
 - Checkout Module
 - Persistence Module
-- UI Module (Avalonia)
+- UI Module (Avalonia – V2)
+- Authentication Module (V2)
 
-Modules communicate only through function inputs and outputs.
+Modules communicate strictly through **function inputs and outputs**.
 
 ---
 
@@ -118,25 +96,33 @@ Modules communicate only through function inputs and outputs.
 - Pure Functions
 - Pattern Matching
 - Option Types
-- Model–Update–View Pattern
+- Model–Update–View (MVU) Pattern
 
 ---
 
 ## 🧪 Testing
 
 Unit tests cover:
-- Authentication
 - Product search
 - Cart operations
-- Checkout and discounts
-- Error handling
+- Checkout logic
+- Discount handling
+- Authentication (V2)
 
 ---
 
 ## ▶️ How to Run
 
+### Run V1 (JSON Version)
 ```bash
-cd src/StoreSimulator.UI
+cd V1/src
+dotnet build
+dotnet run
+```
+
+### Run V2 (Database Version)
+```bash
+cd V2/src/StoreSimulator.UI
 dotnet build
 dotnet run
 ```
@@ -145,13 +131,14 @@ dotnet run
 
 ## 🚀 Future Improvements
 
-- Advanced discounts
-- User roles and history
-- Inventory reporting
-- Web deployment
+- Advanced discount rules
+- User purchase history
+- Admin dashboard
+- Inventory analytics
+- Web-based frontend
 
 ---
 
 ## 📌 Conclusion
 
-This project demonstrates applying functional programming principles to a real-world F# application using Avalonia and SQLite.
+This repository demonstrates how **functional programming principles** can be applied to real-world applications in F#, showing a clear evolution from a simple JSON-based system (V1) to a full database-backed desktop application (V2).
