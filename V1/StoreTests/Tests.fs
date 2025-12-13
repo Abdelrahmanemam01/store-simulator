@@ -73,38 +73,55 @@ let ``Catalog: filterByStockAvailability returns correct stock`` () =
 let ``Cart: addItem increases quantity`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 2 cart
-    cart <- addItem catalog 1 3 cart
+    match addItem catalog 1 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match addItem catalog 1 3 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let item = Map.find 1 cart
     Assert.Equal(5, item.Quantity)
 
 [<Fact>]
 let ``Cart: addItem respects large quantities`` () =
     let catalog = loadCatalog()
-    let cart = addItem catalog 1 1000000 Cart.empty
-    let item = Map.find 1 cart
-    Assert.Equal(1000000, item.Quantity)
+    // Use product 18 (Notebook A5) which has 100 in stock
+    let cart = match addItem catalog 18 100 Cart.empty with
+               | Ok c -> c
+               | Error _ -> Cart.empty
+    let item = Map.find 18 cart
+    Assert.Equal(100, item.Quantity)
 
 [<Fact>]
 let ``Cart: adding zero or negative quantity does nothing`` () =
     let catalog = loadCatalog()
-    let cart = addItem catalog 1 0 Cart.empty
+    let cart = match addItem catalog 1 0 Cart.empty with
+               | Ok c -> c
+               | Error _ -> Cart.empty
     Assert.True(cart.IsEmpty)
-    let cart2 = addItem catalog 1 (-5) Cart.empty
+    let cart2 = match addItem catalog 1 (-5) Cart.empty with
+                | Ok c -> c
+                | Error _ -> Cart.empty
     Assert.True(cart2.IsEmpty)
 
 [<Fact>]
 let ``Cart: adding non-existing product does nothing`` () =
     let catalog = loadCatalog()
-    let cart = addItem catalog 999 3 Cart.empty
+    let cart = match addItem catalog 999 3 Cart.empty with
+               | Ok c -> c
+               | Error _ -> Cart.empty
     Assert.True(cart.IsEmpty)
 
 [<Fact>]
 let ``Cart: updateQuantity changes quantity`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 2 2 cart
-    cart <- updateQuantity 2 5 cart
+    match addItem catalog 2 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match updateQuantity catalog 2 5 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to update quantity")
     let item = Map.find 2 cart
     Assert.Equal(5, item.Quantity)
 
@@ -112,23 +129,33 @@ let ``Cart: updateQuantity changes quantity`` () =
 let ``Cart: updateQuantity removes item if zero`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 2 2 cart
-    cart <- updateQuantity 2 0 cart
+    match addItem catalog 2 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match updateQuantity catalog 2 0 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to update quantity")
     Assert.False(cart |> Map.containsKey 2)
 
 [<Fact>]
 let ``Cart: updateQuantity negative quantity removes item`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 2 2 cart
-    cart <- updateQuantity 2 -5 cart
+    match addItem catalog 2 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match updateQuantity catalog 2 -5 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to update quantity")
     Assert.False(cart |> Map.containsKey 2)
 
 [<Fact>]
 let ``Cart: removeFromCart works`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 3 1 cart
+    match addItem catalog 3 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     cart <- removeFromCart 3 cart
     Assert.False(cart |> Map.containsKey 3)
 
@@ -142,7 +169,9 @@ let ``Cart: removeFromCart non-existing product does nothing`` () =
 let ``Cart: clearCart empties cart`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 4 1 cart
+    match addItem catalog 4 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let cleared = clearCart cart
     Assert.True(cleared.IsEmpty)
 
@@ -150,8 +179,12 @@ let ``Cart: clearCart empties cart`` () =
 let ``Cart: getTotalPrice calculates correctly`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 5 2 cart   // 180*2 = 360
-    cart <- addItem catalog 6 3 cart   // 28.5*3 = 85.5
+    match addItem catalog 5 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match addItem catalog 6 3 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let total = getTotalPrice cart
     Assert.Equal(445.5M, total)
 
@@ -161,7 +194,9 @@ let ``Cart: getTotalPrice calculates correctly`` () =
 let ``Cart: applyPercentageDiscount applies correctly`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 5 2 cart   // 180*2 = 360
+    match addItem catalog 5 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let discounted = applyPercentageDiscount 10M cart  // 10% off -> 324
     Assert.Equal(324M, discounted)
 
@@ -169,7 +204,9 @@ let ``Cart: applyPercentageDiscount applies correctly`` () =
 let ``Pricing: zero discount returns same total`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 1 cart
+    match addItem catalog 1 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let total = applyPercentageDiscount 0M cart
     Assert.Equal(getTotalPrice cart, total)
 
@@ -177,7 +214,9 @@ let ``Pricing: zero discount returns same total`` () =
 let ``Pricing: 100 percent discount returns zero`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 1 cart
+    match addItem catalog 1 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let total = applyPercentageDiscount 100M cart
     Assert.Equal(0M, total)
 
@@ -185,27 +224,41 @@ let ``Pricing: 100 percent discount returns zero`` () =
 let ``Pricing: multiple sequential discounts calculate correctly`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 5 1 cart   // 180
+    match addItem catalog 5 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let first = applyPercentageDiscount 10M cart // 162
-    let second = applyPercentageDiscount 20M (Cart.empty |> addItem catalog 5 1) // 144
+    let cart2 = match addItem catalog 5 1 Cart.empty with
+                | Ok c -> c
+                | Error _ -> Cart.empty
+    let second = applyPercentageDiscount 20M cart2 // 144
     Assert.Equal(162M, first)
-    Assert.Equal(180M, getTotalPrice (Cart.empty |> addItem catalog 5 1)) 
+    Assert.Equal(180M, getTotalPrice cart2) 
 
 [<Fact>]
 let ``PriceCalculator: calculateCheckoutTotal returns correct final`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 1 cart   // Laptop 15000
-    cart <- addItem catalog 2 2 cart   // Mouse 250*2=500
-    let total = calculateCheckoutTotal cart 10M  // 10% discount
-    Assert.Equal(15500M * 0.9M, total)
+    match addItem catalog 1 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    match addItem catalog 2 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    // calculateCheckoutTotal uses tiered discounts automatically
+    // 15500 total is below 20k threshold, so no discount
+    let total = calculateCheckoutTotal cart
+    Assert.Equal(15500M, total)
 
 [<Fact>]
 let ``PriceCalculator: calculateCheckoutTotal with zero discount`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 2 2 cart
-    let total = calculateCheckoutTotal cart 0M
+    match addItem catalog 2 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
+    // 500 total is below 20k threshold, so no discount
+    let total = calculateCheckoutTotal cart
     Assert.Equal(getTotalPrice cart, total)
 
 
@@ -214,7 +267,9 @@ let ``PriceCalculator: calculateCheckoutTotal with zero discount`` () =
 let ``CartJson: cartToJson and loadCartFromJson roundtrip`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 1 cart
+    match addItem catalog 1 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let json = cartToJson cart
     let loaded = loadCartFromJson json
     Assert.Equal(cart |> Map.count, loaded |> Map.count)
@@ -240,7 +295,9 @@ let ``CartJson: loadCartFromJson invalid json returns empty cart`` () =
 let ``CartJson: cartToJsonPretty returns valid JSON`` () =
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 1 cart
+    match addItem catalog 1 1 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     let json = cartToJsonPretty cart
     Assert.Contains("Laptop", json)
 
@@ -249,7 +306,9 @@ let ``CartJson: save and load cart from file`` () =
     let path = Path.GetTempFileName()
     let catalog = loadCatalog()
     let mutable cart = Cart.empty
-    cart <- addItem catalog 1 2 cart
+    match addItem catalog 1 2 cart with
+    | Ok c -> cart <- c
+    | Error _ -> Assert.True(false, "Failed to add item")
     saveCartToFile path cart
     let loaded = loadCartFromFile path
     Assert.Equal(cart |> Map.count, loaded |> Map.count)
