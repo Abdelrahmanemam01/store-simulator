@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Database\Models.fs" />
+    <Compile Include="Database\StoreDbContext.fs" />
+    <Compile Include="BackupManager.fs" />
+    <Compile Include="Catalog.fs" />
+    <Compile Include="Cart.fs" />
+    <Compile Include="Cartjson.fs" />
+    <Compile Include="PriceCalc.fs" />
+    <Compile Include="Database\DatabaseService.fs" />
+    <Compile Include="Auth\AuthService.fs" />
+    <Compile Include="Program.fs" />
+ 
+
+  </ItemGroup>
+
+</Project>

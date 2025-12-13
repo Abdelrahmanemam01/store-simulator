@@ -1,0 +1,116 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:StoreSimulator.UI.ViewModels"
+        x:Class="StoreSimulator.UI.Views.RegisterWindow"
+        Title="Store Simulator - Register" Width="400" Height="600" 
+        Background="#0A0A0F" WindowStartupLocation="CenterScreen"
+        CanResize="False">
+  
+  <Grid Margin="30" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+    
+    <!-- Title -->
+    <TextBlock Grid.Row="0" Text="Create Account" 
+               FontSize="28" FontWeight="Bold" 
+               Foreground="#00FF9C" 
+               HorizontalAlignment="Center" 
+               Margin="0,0,0,30"/>
+    
+    <!-- Username -->
+    <TextBlock Grid.Row="1" Text="Username" 
+               Foreground="White" 
+               FontSize="14" 
+               Margin="0,0,0,8"/>
+    <TextBox Grid.Row="2" 
+             Text="{Binding Username, Mode=TwoWay}" 
+             Watermark="Enter username"
+             Background="#111118" 
+             Foreground="White"
+             BorderBrush="#1F1F2A"
+             Padding="10"
+             Margin="0,0,0,20"/>
+    
+    <!-- Email -->
+    <TextBlock Grid.Row="3" Text="Email" 
+               Foreground="White" 
+               FontSize="14" 
+               Margin="0,0,0,8"/>
+    <TextBox Grid.Row="4" 
+             Text="{Binding Email, Mode=TwoWay}" 
+             Watermark="Enter email"
+             Background="#111118" 
+             Foreground="White"
+             BorderBrush="#1F1F2A"
+             Padding="10"
+             Margin="0,0,0,20"/>
+    
+    <!-- Password -->
+    <TextBlock Grid.Row="5" Text="Password" 
+               Foreground="White" 
+               FontSize="14" 
+               Margin="0,0,0,8"/>
+    <TextBox Grid.Row="6" 
+             Text="{Binding Password, Mode=TwoWay}" 
+             Watermark="Enter password"
+             Background="#111118" 
+             Foreground="White"
+             BorderBrush="#1F1F2A"
+             Padding="10"
+             Margin="0,0,0,20"/>
+    
+    <!-- Confirm Password -->
+    <TextBlock Grid.Row="7" Text="Confirm Password" 
+               Foreground="White" 
+               FontSize="14" 
+               Margin="0,0,0,8"/>
+    <TextBox Grid.Row="8" 
+             Text="{Binding ConfirmPassword, Mode=TwoWay}" 
+             Watermark="Confirm password"
+             Background="#111118" 
+             Foreground="White"
+             BorderBrush="#1F1F2A"
+             Padding="10"
+             Margin="0,0,0,20"/>
+    
+    <!-- Error Message -->
+    <TextBlock Grid.Row="9" 
+               Text="{Binding ErrorMessage}" 
+               Foreground="#FF4A4A"
+               FontSize="13"
+               TextWrapping="Wrap"
+               Margin="0,0,0,20"
+               MinHeight="40"/>
+    
+    <!-- Buttons -->
+    <StackPanel Grid.Row="10" Orientation="Vertical" Spacing="12">
+      <Button Content="Register" 
+              Command="{Binding RegisterCommand}"
+              Background="#00FF9C" 
+              Foreground="#0A0A0F"
+              FontWeight="Bold"
+              FontSize="16"
+              Height="45"
+              IsEnabled="{Binding !IsLoading}"/>
+      
+      <Button Content="Back to Login" 
+              Command="{Binding BackToLoginCommand}"
+              Background="#0D0D14" 
+              BorderBrush="#00FF9C" 
+              BorderThickness="1"
+              Foreground="White"
+              FontSize="14"
+              Height="40"
+              IsEnabled="{Binding !IsLoading}"/>
+    </StackPanel>
+    
+    <!-- Loading indicator -->
+    <TextBlock Grid.Row="11" 
+               Text="Loading..." 
+               Foreground="#00FF9C"
+               FontSize="14"
+               HorizontalAlignment="Center"
+               Margin="0,20,0,0"
+               IsVisible="{Binding IsLoading}"/>
+    
+  </Grid>
+</Window>
+

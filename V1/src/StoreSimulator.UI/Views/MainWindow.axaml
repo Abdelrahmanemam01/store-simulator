@@ -1,0 +1,201 @@
+<!-- MainWindow.axaml - Final: shows Discount only when DiscountVisible == true
+     and displays per-item error message next to "Sold out" inside each cart item -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:StoreSimulator.UI.ViewModels"
+        x:Class="StoreSimulator.UI.Views.MainWindow"
+        Title="Store Simulator" Width="1200" Height="720" Background="#0A0A0F">
+
+  <Window.DataContext>
+    <vm:MainWindowViewModel/>
+  </Window.DataContext>
+
+  <Grid Margin="12" RowDefinitions="Auto,Auto,*">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="420" MinWidth="320" />
+    </Grid.ColumnDefinitions>
+
+    <!-- Header -->
+    <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,8">
+      <TextBlock Text="Catalog" FontSize="20" FontWeight="Bold" Foreground="#00FF9C" />
+      <TextBlock Text="{Binding Catalog.Count, StringFormat='  ({0} items)'}" VerticalAlignment="Center" Opacity="0.85" Margin="8,0"/>
+    </StackPanel>
+
+    <!-- Search row -->
+    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Spacing="8" Margin="0,0,0,8">
+      <TextBox Width="300" Watermark="Search products..." Text="{Binding SearchText, Mode=TwoWay}" />
+      <ComboBox Width="180" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" />
+      <Button Content="Search" Command="{Binding SearchCommand}" />
+      <Button Content="Clear" Command="{Binding ClearSearchCommand}" />
+    </StackPanel>
+
+    <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8"/>
+
+    <!-- Catalog -->
+    <ScrollViewer Grid.Row="2" Grid.Column="0" Margin="0,0,10,0" VerticalScrollBarVisibility="Auto">
+      <ItemsControl ItemsSource="{Binding FilteredProducts}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel Orientation="Horizontal" ItemWidth="320" ItemHeight="120"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Border CornerRadius="8" Padding="12" Margin="6" Background="#111118" BorderBrush="#1F1F2A" BorderThickness="1">
+              <Grid ColumnDefinitions="*,Auto">
+                <StackPanel>
+                  <TextBlock Text="{Binding Name}" FontWeight="SemiBold" Foreground="White"/>
+                  <TextBlock Text="{Binding Category}" FontSize="11" Foreground="#9AA" Margin="0,4,0,0"/>
+                  <TextBlock Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="13" Foreground="White" Margin="0,6,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Spacing="6">
+                  <TextBox Width="60" Text="{Binding SelectedQty, Mode=TwoWay}" HorizontalContentAlignment="Center"/>
+                  <Button Content="Add" Width="72" Height="30" Background="#0D0D14" BorderBrush="#00FF9C" Foreground="White"
+                          Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                          CommandParameter="{Binding Id}" />
+                </StackPanel>
+              </Grid>
+            </Border>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+
+    <!-- Splitter -->
+    <GridSplitter Grid.Row="2" Grid.Column="1" Width="8" Background="#111216"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  ShowsPreview="False" ResizeDirection="Columns" Margin="6,0"/>
+
+    <!-- CART -->
+    <Border Grid.Row="2" Grid.Column="2" CornerRadius="8" Padding="18" Background="#0F1216" BorderBrush="#2A2F34" BorderThickness="1">
+      <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- CART HEADER -->
+        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Stretch">
+
+          <!-- Cart title + Total -->
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Cart" FontSize="18" FontWeight="SemiBold" Foreground="White"/>
+            <TextBlock Text="{Binding Total, StringFormat='  Total: {0:C}'}"
+                       FontSize="16" FontWeight="Bold" Foreground="White"
+                       Margin="8,0,0,0"/>
+          </StackPanel>
+
+          <!-- DISCOUNT ROW (hidden when DiscountVisible == false) -->
+          <StackPanel Orientation="Horizontal" Margin="0,6,0,0" HorizontalAlignment="Left"
+                      IsVisible="{Binding DiscountVisible}">
+            <TextBlock Text="Discount:" Foreground="#BFD"/>
+            <TextBlock Text="{Binding DiscountPercentage, StringFormat={}{0:N0}%}" Margin="6,0,0,0"/>
+            <TextBlock Text="{Binding DiscountAmount, StringFormat=' -{0:C}'}" Margin="10,0,0,0"/>
+          </StackPanel>
+
+        </StackPanel>
+
+        <!-- CART LIST -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,8,0,8">
+          <ItemsControl ItemsSource="{Binding CartItems}">
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <Border Padding="8" Margin="0,6,0,6" Background="#0F1316"
+                        CornerRadius="6" BorderBrush="#1F2428" BorderThickness="1">
+                  <Grid ColumnDefinitions="*,56,Auto" VerticalAlignment="Center">
+
+                    <!-- Left: product name + sold out + per-item error -->
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                      <TextBlock Text="{Binding ProductName}"
+                                 Foreground="White"
+                                 TextWrapping="Wrap"
+                                 MaxWidth="240"
+                                 FontWeight="SemiBold"/>
+
+                      <!-- Sold out (visible when IsSoldOut true on CartItemVm) -->
+                      <TextBlock Text="Sold out"
+                                 Foreground="#FF0059"
+                                 FontWeight="Bold"
+                                 Margin="0,6,0,0"
+                                 IsVisible="{Binding IsSoldOut}" />
+
+                      <!-- per-item error message (same color as Sold out) -->
+                      <TextBlock Text="{Binding ItemErrorMessage}"
+                                 Foreground="#FF0059"
+                                 Margin="0,4,0,0"
+                                 FontSize="13"
+                                 TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <!-- center: quantity -->
+                    <TextBlock Grid.Column="1" Text="{Binding Quantity}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="White"/>
+
+                    <!-- right: price + buttons -->
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Spacing="6">
+                      <TextBlock Text="{Binding LineTotal, StringFormat='{}{0:C}'}"
+                                 VerticalAlignment="Center"
+                                 Foreground="White"
+                                 Margin="0,0,6,0"
+                                 MinWidth="72"
+                                 TextAlignment="Right"/>
+
+                      <Button Content="−" Width="30" Height="28"
+                              Command="{Binding DataContext.DecreaseQtyCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                              CommandParameter="{Binding ProductId}" />
+
+                      <Button Content="+" Width="30" Height="28"
+                              Command="{Binding DataContext.IncreaseQtyCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                              CommandParameter="{Binding ProductId}" />
+
+                      <Button Width="34" Height="28" Margin="6,0,0,0"
+                              Command="{Binding DataContext.RemoveFromCartCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                              CommandParameter="{Binding ProductId}">
+                        <TextBlock Text="✕" FontSize="14" Foreground="White"/>
+                      </Button>
+                    </StackPanel>
+
+                  </Grid>
+                </Border>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+        </ScrollViewer>
+
+        <!-- FOOTER BUTTONS -->
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,8,0,0">
+        
+          <WrapPanel HorizontalAlignment="Right" ItemHeight="36">
+            <Button Content="Save" Width="72" Margin="6,0"
+                    Background="#0D0D14" BorderBrush="#00FF9C" Foreground="White"
+                    Command="{Binding SaveCartCommand}" />
+            <Button Content="Load" Width="72" Margin="6,0"
+                    Background="#0D0D14" BorderBrush="#00FF9C" Foreground="White"
+                    Command="{Binding LoadCartCommand}" />
+            <Button Content="Backup" Width="72" Margin="6,0"
+                    Background="#0D0D14" BorderBrush="#00FF9C" Foreground="White"
+                    Command="{Binding BackupCommand}" />
+            <Button Content="Restore" Width="80" Margin="6,0"
+                    Background="#0D0D14" BorderBrush="#00FF9C" Foreground="White"
+                    Command="{Binding RestoreBackupCommand}" />
+            <Button Content="Clear" Width="60" Margin="6,0"
+                    Background="#0D0D14" BorderBrush="#FF0059" Foreground="White"
+                    Command="{Binding ClearCartCommand}" />
+          </WrapPanel>
+
+          <!-- (optional) top-level error under buttons — kept for compatibility -->
+          <TextBlock Text="{Binding ErrorMessage}"
+                     Foreground="#FF4A4A"
+                     Margin="0,8,0,0"
+                     FontSize="14"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+
+      </Grid>
+    </Border>
+
+  </Grid>
+</Window>

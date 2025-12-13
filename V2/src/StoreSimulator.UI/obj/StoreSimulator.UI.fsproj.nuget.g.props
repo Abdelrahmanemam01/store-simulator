@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\HP\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.14.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\HP\.nuget\packages\" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.0\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.0\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.9\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.9\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props')" />
+    <Import Project="$(NuGetPackageRoot)harfbuzzsharp.nativeassets.webassembly\8.3.1.1\buildTransitive\netstandard1.0\HarfBuzzSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)harfbuzzsharp.nativeassets.webassembly\8.3.1.1\buildTransitive\netstandard1.0\HarfBuzzSharp.NativeAssets.WebAssembly.props')" />
+    <Import Project="$(NuGetPackageRoot)avalonia\11.3.9\buildTransitive\Avalonia.props" Condition="Exists('$(NuGetPackageRoot)avalonia\11.3.9\buildTransitive\Avalonia.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\HP\.nuget\packages\fsharp.core\9.0.303</PkgFSharp_Core>
+    <PkgCommunityToolkit_Mvvm Condition=" '$(PkgCommunityToolkit_Mvvm)' == '' ">C:\Users\HP\.nuget\packages\communitytoolkit.mvvm\8.2.1</PkgCommunityToolkit_Mvvm>
+    <PkgAvalonia_BuildServices Condition=" '$(PkgAvalonia_BuildServices)' == '' ">C:\Users\HP\.nuget\packages\avalonia.buildservices\11.3.2</PkgAvalonia_BuildServices>
+    <PkgAvalonia Condition=" '$(PkgAvalonia)' == '' ">C:\Users\HP\.nuget\packages\avalonia\11.3.9</PkgAvalonia>
+    <PkgAvalonia_Themes_Fluent Condition=" '$(PkgAvalonia_Themes_Fluent)' == '' ">C:\Users\HP\.nuget\packages\avalonia.themes.fluent\11.3.9</PkgAvalonia_Themes_Fluent>
+    <PkgAvalonia_ReactiveUI Condition=" '$(PkgAvalonia_ReactiveUI)' == '' ">C:\Users\HP\.nuget\packages\avalonia.reactiveui\11.3.8</PkgAvalonia_ReactiveUI>
+    <PkgAvalonia_Fonts_Inter Condition=" '$(PkgAvalonia_Fonts_Inter)' == '' ">C:\Users\HP\.nuget\packages\avalonia.fonts.inter\11.3.9</PkgAvalonia_Fonts_Inter>
+    <PkgAvalonia_Diagnostics Condition=" '$(PkgAvalonia_Diagnostics)' == '' ">C:\Users\HP\.nuget\packages\avalonia.diagnostics\11.3.9</PkgAvalonia_Diagnostics>
+    <PkgAvalonia_Desktop Condition=" '$(PkgAvalonia_Desktop)' == '' ">C:\Users\HP\.nuget\packages\avalonia.desktop\11.3.9</PkgAvalonia_Desktop>
+    <PkgAvalonia_Controls_DataGrid Condition=" '$(PkgAvalonia_Controls_DataGrid)' == '' ">C:\Users\HP\.nuget\packages\avalonia.controls.datagrid\11.3.9</PkgAvalonia_Controls_DataGrid>
+  </PropertyGroup>
+</Project>

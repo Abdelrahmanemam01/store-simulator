@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <!-- ViewModels - All view models for the application -->
+    <Compile Include="ViewModels/ViewModelBase.fs" />
+    <Compile Include="ViewModels/LoginViewModel.fs" />
+    <Compile Include="ViewModels/RegisterViewModel.fs" />
+    <Compile Include="ViewModels/MainWindowViewModel.fs" />
+    
+    <!-- Views - All window views -->
+    <Compile Include="Views/LoginWindow.axaml.fs" />
+    <Compile Include="Views/RegisterWindow.axaml.fs" />
+    <Compile Include="Views/MainWindow.axaml.fs" />
+    
+    <!-- Application entry point and configuration -->
+    <Compile Include="App.axaml.fs" />
+    <Compile Include="Program.fs" />
+    
+    <!-- ViewLocator (optional, currently not used but available) -->
+    <!-- <Compile Include="ViewLocator.fs" /> -->
+  </ItemGroup>
+  
+  <!-- Note: Core business logic modules (Catalog, Cart, Database, Auth, BackupManager, PriceCalculator)
+       are included via the StoreApp.fsproj project reference below.
+       These modules provide:
+       - Catalog: Product catalog management
+       - Cart: Shopping cart operations
+       - Database: Database services and models
+       - Auth: Authentication services (login/register)
+       - BackupManager: Backup and restore functionality
+       - PriceCalculator: Price calculation and discounts
+       - CartJson: JSON serialization for cart
+  -->
+
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.9" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.9" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.9" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.8" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.9" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.9" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.3.9">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StoreApp.fsproj" />
+  </ItemGroup>
+</Project>
