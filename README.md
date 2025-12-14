@@ -8,7 +8,7 @@ This repository contains **two independent versions** of the project, released a
 
 ## 📦 Versions Overview
 
-### 🔹 V1 – JSON Version (`/V1`)
+### 🔹 V1 – JSON - Version (`/V1`)
 - No authentication
 - Data persistence using **JSON files**
 - Focus on **functional programming fundamentals**
